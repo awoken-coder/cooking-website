@@ -1,0 +1,14 @@
+{
+  "name": "website-cooking",
+  "version": "1.0.0",
+  "description": "personal project of a cooking recipes hosting website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joao francisco andrade",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
