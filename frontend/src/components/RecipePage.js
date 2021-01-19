@@ -2,7 +2,8 @@ import image from '../images/canja-de-galinha.jpeg'
 
 
 const RecipePage = ({ recipe }) => {
-  const { name, ingredients, steps, categories, origin, owner, time } = recipe
+  const { name, ingredientsInfo, steps, categories, origin, owner, time } = recipe
+  const {servings, ingredients} = ingredientsInfo
 
   return (
     <>
@@ -16,6 +17,7 @@ const RecipePage = ({ recipe }) => {
       <img src={image} alt='bowl of soup canja de galinha' width='400px' height='300px' />
       <p>Tempo de preparação: {time}</p>
       <h2>Ingredientes</h2>
+      <p>Servings: {servings}</p>
       <ul>
         {ingredients.map(
           ({ ingredient, quantity, unit }, index) => (
