@@ -8,6 +8,7 @@ const RecipePage = ({ recipe }) => {
   return (
     <>
       <h1>{name}</h1>
+      <button>Edit</button>
       <h2>Categorias</h2>
       <ul>
         {categories.map(
