@@ -1,0 +1,68 @@
+{
+  "recipe": [
+    {
+      "name": "Canja de galinha",
+      "ingredientsInfo": {
+        "servings": 3,
+        "ingredients": [
+          { "ingredient": "galinha", "quantity": 1, "unit": "" },
+          { "ingredient": "massa de canja", "quantity": 200, "unit": "gramas" },
+          { "ingredient": "sumo de limão", "quantity": 1, "unit": "unidade" },
+          { "ingredient": "sal", "quantity": 0, "unit": "qb" },
+          { "ingredient": "hortelã", "quantity": 0, "unit": "qb" }
+        ]
+      },
+      "steps": "Ferver a água com a galinha. Adicionar a massa e sal. Deixar cozer durante 30 minutos. Adicionar o sumo de limão ea hortelã e servir.",
+      "categories": ["Soupa", "Portuguêsa"],
+      "origin": "www.cozinhar.pt/canja-de-galinha",
+      "owner": "João Francisco",
+      "time": "30 minutos"
+    },
+    {
+      "name": "Soupa de cogumelos cremosa",
+      "ingredientsInfo": {
+        "servings": 3,
+        "ingredients": [
+          { "ingredient": "cogumelos castanhos", "quantity": 500, "unit": "gramas" },
+          { "ingredient": "alho", "quantity": 4, "unit": "dentes" },
+          { "ingredient": "cebola", "quantity": 1, "unit": "unidades" },
+          { "ingredient": "azeite", "quantity": 2, "unit": "colher de soupa" },
+          { "ingredient": "molho de soja pouco sal", "quantity": 2, "unit": "colher de soupa" },
+          { "ingredient": "tomilho", "quantity": 0, "unit": "qb" },
+          { "ingredient": "farinha", "quantity": 2, "unit": "colher de soupa" },
+          { "ingredient": "caldo vegetal", "quantity": 500, "unit": "ml" },
+          { "ingredient": "leite", "quantity": 250, "unit": "ml" },
+          { "ingredient": "sal e pimenta", "quantity": 0, "unit": "qb" }
+        ]
+      },
+      "steps": "Lavar, secar os cogumelos e cortar metade em pedaços grandes e metade em pequenos. Cortar em cubinhos e refugar a ceboula com alho. Adicionar os cogumelos, sal e pimenta e cozinhar em lume alto durante 5 minutos. Adicionar a segunda colher de azeite e a farinha e mexer durante 30 segundos para formar o roux. Adicionar o caldo vegetal e mexer até dissolver toda a farinha. Baixar o lume, adicionar o leite e deixar durante 10 a 15 minutos. Adicionar o molhor de soja e verificar os condimentos.",
+      "categories": ["Soupa", "Vegetariano","Saudável"],
+      "origin": "https://theclevermeal.com/healthy-mushroom-soup/",
+      "owner": "João Francisco",
+      "time": "45 minutos"
+    },
+    {
+      "name": "Shakshouka",
+      "ingredientsInfo": {
+        "servings": 4,
+        "ingredients": [
+          { "ingredient": "ovos", "quantity": 4, "unit": "unidades" },
+          { "ingredient": "cebola", "quantity": 1, "unit": "dentes" },
+          { "ingredient": "alho", "quantity": 4, "unit": "dentes" },
+          { "ingredient": "pimento vermelho", "quantity": 1, "unit": "unidades" },
+          { "ingredient": "tomate enlatado", "quantity": 800, "unit": "ml" },
+          { "ingredient": "chouriço", "quantity": 0, "unit": "qb" },
+          { "ingredient": "paprika", "quantity": 2, "unit": "colher de soupa" },
+          { "ingredient": "cuminho", "quantity": 1, "unit": "colher de soupa" },
+          { "ingredient": "coentros frescos", "quantity": 0, "unit": "qb" },
+          { "ingredient": "salsa fresca", "quantity": 0, "unit": "qb" }
+        ]
+      },
+      "steps": "Cortar o chouriço em pedaços médios (opcionalmente tirar o envolcro). Cortar o pimento, cebola e alho, e saltear durante 5 minutos. Adicionar o tomate e cozinhar durante 5 minutos. Fazer 4 buracos no tomate e adicionar os ovos. Opcionalmente por tampa por cima da frigideira para cozinhar melhor os ovos. Quando pronto adicionar a salsa e os coentros, e servir com pão naan ou pão torrado.",
+      "categories": ["Vegetariano", "Árabe","Brunch"],
+      "origin": "https://downshiftology.com/recipes/shakshuka/",
+      "owner": "João Francisco",
+      "time": "30 minutos"
+    }
+  ]
+}
