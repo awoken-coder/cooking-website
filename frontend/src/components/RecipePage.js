@@ -1,8 +1,9 @@
 import image from '../images/canja-de-galinha.jpeg'
 
 
-const RecipePage = ({ recipe }) => {
-  const { name, ingredientsInfo, steps, categories, origin, owner, time } = recipe
+const RecipePage = ({ recipes }) => {
+  if (!recipes) {return(null)}
+  const { name, ingredientsInfo, steps, categories, origin, owner, time } = recipes
   const {servings, ingredients} = ingredientsInfo
 
   return (
