@@ -16,7 +16,8 @@
       "categories": ["Soupa", "Portuguêsa"],
       "origin": "www.cozinhar.pt/canja-de-galinha",
       "owner": "João Francisco",
-      "time": "30 minutos"
+      "time": "30 minutos",
+      "id": 1
     },
     {
       "name": "Soupa de cogumelos cremosa",
@@ -39,7 +40,8 @@
       "categories": ["Soupa", "Vegetariano","Saudável"],
       "origin": "https://theclevermeal.com/healthy-mushroom-soup/",
       "owner": "João Francisco",
-      "time": "45 minutos"
+      "time": "45 minutos",
+      "id": 2
     },
     {
       "name": "Shakshouka",
@@ -62,7 +64,8 @@
       "categories": ["Vegetariano", "Árabe","Brunch"],
       "origin": "https://downshiftology.com/recipes/shakshuka/",
       "owner": "João Francisco",
-      "time": "30 minutos"
+      "time": "30 minutos",
+      "id": 3
     }
   ]
 }

@@ -12,7 +12,10 @@ const App = () => {
   useEffect(() => {   //Fetches all data when loads
     recipeService
       .getAll()
-      .then(res => setRecipes(res))
+      .then(res => {
+        setRecipes(res)
+        console.log('recipes loaded were',res)
+      })
       .catch(err => console.log(err))
   }, [])
   const renderSwitch = (page) => {
@@ -20,7 +23,7 @@ const App = () => {
       case ('recipe'):
         return (<RecipePage recipes={recipes[1]} />)
       case ('mainPage'):
-        return (<MainPage></MainPage>)
+        return (<MainPage recipes={recipes}></MainPage>)
       default:
         return (
           <div>
