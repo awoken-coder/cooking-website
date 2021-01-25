@@ -2,6 +2,7 @@ import image from '../images/canja-de-galinha.jpeg'
 
 
 const RecipePage = ({ recipes }) => {
+  console.log('recipes in recipePage',recipes)
   if (!recipes) {return(null)}
   const { name, ingredientsInfo, steps, categories, origin, owner, time } = recipes
   const {servings, ingredients} = ingredientsInfo

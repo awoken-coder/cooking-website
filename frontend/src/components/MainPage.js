@@ -1,7 +1,6 @@
 import React from 'react'
-import RecipeList from './RecipeList'
 
-const MainPage = ({recipes}) => {
+const MainPage = () => {
     return (
         <div>
             <h1>Cooking Time</h1>
@@ -10,8 +9,6 @@ const MainPage = ({recipes}) => {
                 <input type="text"/>
                 <button type="submit" onClick={()=>'ola'}>filter</button>
             </form>
-            <RecipeList recipes={recipes}/>
-
         </div>
     )
 }

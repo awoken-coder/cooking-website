@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RecipeList = ({ recipes }) => {
+const RecipeList = ({ recipes, editPageData }) => {
     const listGenerator = (recipes) => {
         return recipes.map((recipe) => {
             return (
@@ -8,9 +8,12 @@ const RecipeList = ({ recipes }) => {
                     {recipe.name}
                     <div>
                         <ul>
-                            {recipe.categories.map((category) => <li key={category}>{category}</li>)}
+                            {recipe.categories.map((category) => (
+                            <li key={category}>{category}</li>
+                            ))}
                         </ul>
                     </div>
+                    <button onClick={()=>editPageData({page:'recipe',recipes:recipe})}>Show more</button>
                 </li>
             )
 
