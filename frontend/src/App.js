@@ -1,25 +1,42 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import RecipePage from './components/RecipePage'
+import MainPage from './components/MainPage'
+import recipeService from './services/recipes'
 
-import axios from 'axios'
-const baseUrl = 'http://localhost:3001/recipes'
 
 
 const App = () => {
   const [recipes, setRecipes] = useState([{}])
+  const [page, setPage] = useState('')
 
-  useEffect( () =>  {
-    const fetchRecipes = async () => {
-      const res = await axios.get(baseUrl)
-      console.log(res.data,'axios response')
-      setRecipes(res.data)
+  useEffect(() => {   //Fetches all data when loads
+    recipeService
+      .getAll()
+      .then(res => setRecipes(res))
+      .catch(err => console.log(err))
+  }, [])
+  const renderSwitch = (page) => {
+    switch (page) {
+      case ('recipe'):
+        return (<RecipePage recipes={recipes[1]} />)
+      case ('mainPage'):
+        return (<MainPage></MainPage>)
+      default:
+        return (
+          <div>
+          </div>
+        )
     }
-    fetchRecipes()
-  },[])
-
+  }
   return (
-    <RecipePage recipes={recipes[1]} />
+    <div>
+      <button onClick={() => setPage('mainPage')}>MainPage</button>
+      <button onClick={() => setPage('')}>clear</button>
+      <button onClick={() => setPage('recipe')}>recipePage</button>
+      {renderSwitch(page)}
+    </div>
   )
+
 }
 
 export default App;
