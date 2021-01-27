@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import RecipePage from './components/RecipePage'
 import MainPage from './components/MainPage'
 import RecipeList from './components/RecipeList'
+import NewRecipePage from './components/NewRecipePage'
 import recipeService from './services/recipes'
 
 
@@ -20,8 +21,8 @@ const App = () => {
       .catch(err => console.log(err))
   }, [])
 
-  const editPageData = ({page, recipes}) => {
-    console.log('editPageDataProps, page:',page, 'recipes',recipes)
+  const editPageData = ({ page, recipes }) => {
+    console.log('editPageDataProps, page:', page, 'recipes', recipes)
     setCurrentData({
       page: page,
       recipes: recipes
@@ -35,10 +36,14 @@ const App = () => {
       case ('mainPage'):
         return (<MainPage recipes={currentData.recipes}></MainPage>)
       case ('listPage'):
-        return (<RecipeList 
+        return (<RecipeList
           recipes={currentData.recipes}
           editPageData={editPageData}
-          ></RecipeList>)
+        ></RecipeList>)
+      case ('newRecipePage'):
+        return (<NewRecipePage
+          editPageData={editPageData}
+        ></NewRecipePage>)
       default:
         return (
           <div>
@@ -52,6 +57,7 @@ const App = () => {
       <button onClick={() => editPageData({ page: 'listPage', recipes: recipes })}>ListPage</button>
       <button onClick={() => editPageData({ page: '', recipes: [] })}>clear</button>
       <button onClick={() => editPageData({ page: 'recipe', recipes: recipes[0] })}>recipePage</button>
+      <button onClick={() => editPageData({ page: 'newRecipePage', recipes: [] })}>NewRecipePage</button>
       {renderSwitch(currentData)}
     </div>
   )
