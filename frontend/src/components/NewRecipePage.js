@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import recipeService from "../services/recipes";
 
-const NewRecipePage = ({ editPageData }) => {
+const NewRecipePage = ({ setRecipes, recipes }) => {
   const [newRecipe, setNewRecipe] = useState({
     name: '',
     ingredientsInfo: {
@@ -22,6 +23,27 @@ const NewRecipePage = ({ editPageData }) => {
 
   const handleSubmit = event => {
     event.preventDefault()
+
+    recipeService.add(newRecipe)
+      .then(res=> {
+        setRecipes(recipes.concat(res))
+      })
+      .then(setNewRecipe({
+        name: '',
+        ingredientsInfo: {
+          servings: 0,
+          ingredients: [],
+        },
+        steps: '',
+        categories: [],
+        origin: '',
+        time: '',
+      }))
+      .then(setNewIngredient({
+        ingredient: '',
+        quantity: 0,
+        unit: ''
+      }))
     return ''
   }
   const handleInputIngredientChange = event => {
@@ -90,7 +112,8 @@ const NewRecipePage = ({ editPageData }) => {
       return <li key={index}>{category}</li>
     })
   }
-  const addNewCategory = () => {
+  const addNewCategory = (event) => {
+    event.preventDefault()
     const arrNewCategory = newRecipe.categories.concat([newCategory])
 
     let copyObject = JSON.parse(JSON.stringify(newRecipe))
@@ -104,7 +127,8 @@ const NewRecipePage = ({ editPageData }) => {
       return <li key={index}>{ingredient}, {quantity} {unit}</li>
     })
   }
-  const addNewIngredient = () => {
+  const addNewIngredient = (event) => {
+    event.preventDefault()
     if (newIngredient.ingredient === '' || newIngredient.unit === '' || newIngredient.quantity === 0) {
       return ''
     }
@@ -122,7 +146,7 @@ const NewRecipePage = ({ editPageData }) => {
   return (
     <div>
       <h2>New recipe Page</h2>
-      <form onSubmit={handleSubmit}>
+      <form >
         <ul>
           <li> Name: <input type='text' name='name' value={newRecipe.name} onChange={handleInputChange} /> </li>
           <li> Servings: <input type='number' name='servings' value={newRecipe.ingredientsInfo.servings} onChange={handleInputChange} /> </li>
@@ -147,7 +171,7 @@ const NewRecipePage = ({ editPageData }) => {
           <li>Origin: <input type='text' name='origin' value={newRecipe.origin} onChange={handleInputChange} /></li>
           <li>Time: <input type='text' name='time' value={newRecipe.time} onChange={handleInputChange} /></li>
         </ul>
-        <button type='submit'>submit</button>
+        <button type='submit' onClick={handleSubmit}>submit</button>
       </form>
     </div>
   )

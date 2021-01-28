@@ -42,7 +42,7 @@ const App = () => {
         ></RecipeList>)
       case ('newRecipePage'):
         return (<NewRecipePage
-          editPageData={editPageData}
+          setRecipes={setRecipes} recipes={recipes}
         ></NewRecipePage>)
       default:
         return (
